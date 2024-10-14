@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../imagens/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    backdrop-filter: blur(8px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;  
+}
+
+div.pokedevs {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0px;
+}
+
+div.cartao-pokedev { 
+    display: none; 
+    max-width: 360px; 
+    border-radius: 10px; 
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); 
+}
+
+div.aberto {
+    display: block;
+}
+
+div.cartao-pokedev img {
+   width: 100%;
+   height: 100%;
+   margin-top: 10px;
+} 
+
+div.cartao-topo {
+    padding: 30px 40px 0px;
+}
+
+h2.nome {
+    margin-bottom: 6px;
+}
+
+span.tipo {
+    background-color: #ffffff;
+    font-size: 0.9em;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+div.detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+div.cartao-informacoes h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+div.descricao {
+    padding: 0px 10px;
+    font-size: 1em;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+div.tipo-eletrico {
+    background-color: #fcc719;
+}
+
+div.tipo-fogo {
+    background-color: #f15000d2;
+}
+
+div.tipo-agua {
+    background-color: #015c98;
+}
+
+div.tipo-grama {
+    background-color: #49d0b0;
+}
+
+div.tipo-trevas {
+    background-color: #ba68c8;
+}
+
+div.tipo-fada {
+    background-color: #c29791;
+}
+
+nav.listagem {
+    display: block;
+    max-width: 200px;
+}
+
+nav.listagem img {
+    width: 25%;
+}
+
+nav.listagem .pokedev {
+    background-color: #6b727a;
+    color: #ffffff;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 30px 0px 0px 30px;
+    min-height: 70px;
+
+    transition: 0.15s ease-in-out;
+}
+
+nav.listagem .pokedev:hover {
+    transform: scale(1.1);
+} 
+
+nav.listagem .pokedev span {
+    padding-right: 20px;
+}
+
+nav.listagem .pokedev.ativo {
+    background-color: #fa6668;
+}
